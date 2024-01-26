@@ -17,7 +17,7 @@
                     {{ __('MENU Jadwal Periksa') }}
                     <h3>Data Poli</h3>
  
-                    <a href="{{ route('tambahjadwal') }}"> + Tambah Jadwal</a>
+                    <a href="{{ route('tambahjadwal', $dokter->id) }}"> + Tambah Jadwal</a>
                     
                     <br/>
                     <br/>

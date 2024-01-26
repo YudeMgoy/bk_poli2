@@ -29,10 +29,12 @@ Route::post('/admin/obat/update',[App\Http\Controllers\ObatController::class, 'u
 Route::get('/admin/obat/delete/{id}',[App\Http\Controllers\ObatController::class, 'delete'])->name('hapusobat');
 Route::get('admin/dokter',[App\Http\Controllers\DokterController::class, 'index'])->name('dokter');
 Route::get('admin/dokter/add',[App\Http\Controllers\DokterController::class, 'tambahdokter'])->name('tambahdokter');
+Route::get('admin/dokter/loginform',function(){return view("dokterlogin");})->name('dokterloginform');
+Route::post("admin/dokter/login", [App\Http\Controllers\DokterController::class, 'Login'])->name('logindokter');
 Route::post('admin/dokter/storedokter',[App\Http\Controllers\DokterController::class, 'store'])->name('storedokter');
 
 Route::get('admin/jadwalperiksa',[App\Http\Controllers\JadwalController::class, 'index'])->name('jadwalperiksa');
-Route::get('admin/jadwalperiksa/add',[App\Http\Controllers\JadwalController::class, 'tambah'])->name('tambahjadwal');
+Route::get('admin/jadwalperiksa/add/{id}',[App\Http\Controllers\JadwalController::class, 'tambah'])->name('tambahjadwal');
 Route::post('admin/jadwalperiksa/store',[App\Http\Controllers\JadwalController::class, 'store'])->name('storejadwal');
 Route::get('admin/jadwalperiksa/aktifkan/{id}',[App\Http\Controllers\JadwalController::class, 'aktifkan'])->name('aktifkanjadwal');
 

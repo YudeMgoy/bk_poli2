@@ -17,15 +17,7 @@
                     {{ __('MENU Tambah Jadwal Periksa') }}
                     <form action="{{ route('storejadwal') }}" method="post">
                         {{ csrf_field() }}
-                        <div class="col-md-6">
-                            Dokter
-                            <select id="id_dokter" name="id_dokter">
-                                @foreach($dokter as $p)
-                                <option value="{{ $p->id }}">{{ $p->nama }}</option>
-                                @endforeach
-                                {{-- <option value="pasien">Pasien</option> --}}
-                              </select>
-                        </div>
+                        <input type="number" name="id_dokter" required value="{{$id}}"/><br/>
                         Hari 
                         <div class="col-md-6">
                             <select id="hari" name="hari">

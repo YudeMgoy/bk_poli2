@@ -44,6 +44,9 @@
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in Admin</a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('dokterloginform') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in Dokter</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('tambahpasien') }}">Daftar Pasien</a>
                 </li>
             </ul>
